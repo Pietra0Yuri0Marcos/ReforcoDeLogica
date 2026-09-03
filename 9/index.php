@@ -1,13 +1,15 @@
 <?php
 
 $quantidade = readline("Quantos números você quer colocar? ");
-$soma = 0;
+$numeros = [];
 
-for ($i = 1; $i <= $quantidade; $i++) {
+for ($i = 0; $i < $quantidade; $i++) {
     $numero = readline("Digite o número: ");
-    $soma = $soma + $numero;
+    $numeros[] = $numero;
 }
+
+$soma = array_sum($numeros);
 
 echo "A soma é: " . $soma;
 
-?>
+?> 
